@@ -1,15 +1,27 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.scss";
-
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+import React, { useState } from "react";
+import Navbar from "../component/navbar";
+import SideBar from "../component/sidebar";
+import HeroSection from "../component/herosection";
+import InfoSection from "../component/infoSection";
+import Services from "../component/services";
+import Footer from "../component/footer/index";
+import { homeObjOne, homeObjTwo, homeObjThree } from "../component/infoSection/data";
+const Home = () => {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
+	return (
+		<>
+			<SideBar isOpen={isOpen} toggle={toggle} />
+			<Navbar toggle={toggle} />
+			<HeroSection />
+			<InfoSection {...homeObjOne} />
+			<InfoSection {...homeObjTwo} />
+			<Services />
+			<InfoSection {...homeObjThree} />
+			<Footer />
+		</>
+	);
+};
+export default Home;
