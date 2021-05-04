@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 import injectContext from "./store/appContext";
 import Home from "./views/home";
 import SigninPage from "./views/signin";
+import HomeSignin from "./views/homeSignin";
 
 //create your first component
 const Layout = () => {
@@ -21,6 +22,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/signin">
 							<SigninPage />
+						</Route>
+						<Route exact path="/homeSignin">
+							<HomeSignin />
 						</Route>
 					</Switch>
 				</ScrollToTop>

@@ -1,3 +1,4 @@
+import carro from "../../../images/car.svg";
 export const homeObjOne = {
 	id: "about",
 	lightBg: false,
@@ -9,7 +10,7 @@ export const homeObjOne = {
 		"get access to our exclusive app that allows you to send unlimited  transactions with out getting charged any fees.",
 	buttonLabel: "get started ",
 	imgStart: false,
-	img: "AddToCart",
+	img: carro,
 	alt: "Car",
 	dark: true,
 	primary: true,

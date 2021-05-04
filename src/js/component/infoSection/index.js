@@ -59,8 +59,7 @@ const InfoSection = ({
 						</Column1>
 						<Column2>
 							<ImgWrap>
-								<UndrawAddToCart primaryColor="#fdcb6e" />
-								<Img />
+								<Img src={img} />
 							</ImgWrap>
 						</Column2>
 					</InfoRow>
